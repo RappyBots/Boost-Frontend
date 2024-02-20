@@ -3,7 +3,7 @@
 	import "../app.css";
 </script>
 
-<div class="min-h-screen bg-bg-dark text-white font-">
+<div class="min-h-screen bg-bg-dark text-white">
 	<Header />
 
 	<main>
