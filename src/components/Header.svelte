@@ -19,7 +19,7 @@
 			<!-- Links -->
 			<div id="nav-links" class="hidden lg:flex space-x-5 mr-4 font-semibold hover:*:text-secondary select-none">
 				<a href="/">Home</a>
-				<a href="https://discord.com/invite/2RctHuWqPB">Support</a>
+				<a href="/support">Support</a>
 				<a href="https://discord.com/users/397829538773598220">Contact</a>
 			</div>
 
@@ -29,7 +29,7 @@
 			</button>
 
 			<!-- Invite Btn -->
-			<Button className="hidden md:flex" href="/invite">
+			<Button className="hidden md:flex bg-primary hover:bg-accent" href="/invite">
 				<div class="flex h-full">Invite<img src={Logo} class="h-[24px] object-contain" alt="Boost Notifications Logo"/>Boost Notifications</div>
 			</Button>
 		</div>
