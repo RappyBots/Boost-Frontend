@@ -12,7 +12,7 @@
 		The best way to get notified when your members boost your server
 	</div>
 	<div class="text-xl md:text-2xl text-gray-500">
-		Get notified when someone boosts your server with <strong class="text-white">flawless customization powered by Discord embeds</strong>, and reward them with a custom role
+		Get notified when someone boosts your server with <strong class="text-white">flawless customization powered by Discord embeds</strong>, and reward them with custom roles
 	</div>
 
 	<div class="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-3">
