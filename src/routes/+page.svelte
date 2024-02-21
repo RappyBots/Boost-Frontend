@@ -8,7 +8,7 @@
 </script>
 
 <div class="min-h-[720px] max-w-5xl pt-48 text-center space-y-12 mx-auto">
-	<div class="text-5xl font-bold">
+	<div class="text-5xl font-bold bg-gradient-to-b from-white to-gray-600 bg-clip-text text-transparent">
 		The best way to get notified when your members boost your server
 	</div>
 	<div class="text-2xl text-gray-500">
