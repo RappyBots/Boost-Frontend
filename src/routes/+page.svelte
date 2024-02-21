@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>✨ Boost Notifications - Home</title>
+	<title>Boost Notifications - Home</title>
 </svelte:head>
 
 <script>
