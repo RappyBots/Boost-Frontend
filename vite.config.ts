@@ -1,6 +1,8 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
 
+require('dotenv').config();
+
 export default defineConfig({
 	plugins: [sveltekit()],
 	test: {
@@ -9,6 +11,8 @@ export default defineConfig({
 	server: {
 		watch: {
 			usePolling: true
-		}
+		},
+		port: parseInt(process.env.PORT || "3000"),
+		host: process.env.HOST || '0.0.0.0'
 	}
 });
