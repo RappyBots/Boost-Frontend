@@ -1,6 +1,6 @@
 <div class="flex h-56 bg-[#00000025] justify-between">
     <div class="flex flex-col p-10 h-full space-y-16 text-gray-400">
-        <a href="https://rappytv.com/">
+        <a href="/contact">
             <div class="text-2xl font-semibold">RappyTV</div>
             <div class="text-md">© 2024 RappyTV</div>
         </a>

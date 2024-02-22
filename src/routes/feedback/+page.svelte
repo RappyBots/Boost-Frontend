@@ -2,4 +2,4 @@
 	import RedirectPage from "$components/RedirectPage.svelte";
 </script>
 
-<RedirectPage url="https://discord.gg/HaddzQrCbG" />
+<RedirectPage url="https://boost-feedback.rappytv.com/" />
