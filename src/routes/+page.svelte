@@ -10,7 +10,7 @@
 </script>
 
 <div class="min-h-[820px] max-w-5xl pt-32 md:pt-64 text-center space-y-12 mx-10 lg:mx-auto">
-	<div class="text-4xl md:text-5xl font-black bg-gradient-to-b from-white to-gray-600 bg-clip-text text-transparent">
+	<div class="text-4xl md:text-5xl font-black bg-gradient-to-b from-white to-gray-600 p-2 bg-clip-text text-transparent">
 		The best way to get notified when your members boost your server
 	</div>
 	<div class="text-xl md:text-2xl text-gray-500">
