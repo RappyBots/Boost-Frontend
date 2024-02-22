@@ -4,6 +4,9 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+const port = parseInt(process.env.PORT || "3000");
+const host = process.env.HOST || '0.0.0.0';
+
 export default defineConfig({
 	plugins: [sveltekit()],
 	test: {
@@ -13,7 +16,11 @@ export default defineConfig({
 		watch: {
 			usePolling: true
 		},
-		port: parseInt(process.env.PORT || "3000"),
-		host: process.env.HOST || '0.0.0.0'
+		port: port,
+		host: host
+	},
+	preview: {
+		port: port,
+		host: host
 	}
 });
