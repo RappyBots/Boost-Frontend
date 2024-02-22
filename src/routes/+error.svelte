@@ -6,5 +6,5 @@
     <div class="text-6xl font-black">
         {$page.status}
     </div>
-    <div class="text-3xl">{$page.error.message}</div>
+    <div class="text-3xl">{$page.error?.message || "Unknown error"}</div>
 </div>
