@@ -6,6 +6,6 @@
     });
 </script>
 
-<div class="flex text-center justify-center text-4xl pt-[50vh]">
-    Redirecting...
+<div class="flex h-screen justify-center items-center text-4xl font-black">
+    <div>Redirecting...</div>
 </div>

@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
 
     onMount(() => {
-        window.location.href = "https://discord.com/api/oauth2/authorize?client_id=1067880912538304583&permissions=8&scope=applications.commands%20bot";
+        window.location.href = "https://discord.com/users/397829538773598220";
     });
 </script>
 

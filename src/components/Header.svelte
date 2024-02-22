@@ -20,7 +20,7 @@
 			<div id="nav-links" class="hidden lg:flex space-x-5 mr-4 font-semibold hover:*:text-secondary select-none">
 				<a href="/">Home</a>
 				<a href="/support">Support</a>
-				<a href="https://discord.com/users/397829538773598220">Contact</a>
+				<a href="/contact">Contact</a>
 			</div>
 
 			<!-- Hamburger Menu -->
