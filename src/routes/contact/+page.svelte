@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
 
     onMount(() => {
-        window.location.href = "https://discord.com/users/397829538773598220";
+        window.location.href = "https://rappytv.com/";
     });
 </script>
 
