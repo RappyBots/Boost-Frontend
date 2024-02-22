@@ -5,6 +5,7 @@
 <script>
 	import Button from '$components/Button.svelte';
 	import Card from '$components/Card.svelte';
+	import Link from '$components/Link.svelte';
 
 	import Logo from "$lib/images/logo.webp"
 </script>
@@ -37,13 +38,13 @@
 	<!-- Cards -->
 	<div class="grid gap-4 mt-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
 		<Card title="🕑 Uptime">
-			We will work hard to ensure that our bot is always ready to send notifications when someone boosts your server. You can find our status page <a target="_blank" class="text-secondary" href="/status">here</a>.
+			We will work hard to ensure that our bot is always ready to send notifications when someone boosts your server. You can find our status page <Link href="/status">here</Link>.
 		</Card>
 		<Card title="✨ Customization">
 			You can customize the image of the embed and DM messages sent to booster to fit your server's style.
 		</Card>
 		<Card title="🌍 Multi Language">
-			You can change the language of the bot's reponses, command names and descriptions to ensure that your server members can use the bot in their own language. If you're missing a language, you can apply as a translator on our <a target="_blank" class="text-secondary" href="/support">support server</a>.
+			You can change the language of the bot's reponses, command names and descriptions to ensure that your server members can use the bot in their own language. If you're missing a language, you can apply as a translator on our <Linkhref="/support">support server</Link>.
 		</Card>
 		<Card title="🛠️ Easy Management">
 			You can manage which roles will be given to the booster and which channel will the notifications be sent to with just one command.
@@ -52,7 +53,7 @@
 			You can simulate a boost to test if the bot is working correctly and to see how your notification configuration will look like.
 		</Card>
 		<Card title="📞 Fast Support">
-			We have a dedicated <a target="_blank" class="text-secondary" href="/support">support server</a> where you can ask for help and we will respond as soon as possible. To report bugs or suggest new features use our <a target="_blank" class="text-secondary" href="/feedback">feedback app</a>.
+			We have a dedicated <Link href="/support">support server</Link> where you can ask for help and we will respond as soon as possible. To report bugs or suggest new features use our <Link href="/feedback">feedback app</Link>.
 		</Card>
 	</div>
 </div>
