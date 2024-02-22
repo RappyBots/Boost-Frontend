@@ -44,7 +44,7 @@
 			You can customize the image of the embed and DM messages sent to booster to fit your server's style.
 		</Card>
 		<Card title="🌍 Multi Language">
-			You can change the language of the bot's reponses, command names and descriptions to ensure that your server members can use the bot in their own language. If you're missing a language, you can apply as a translator on our <Linkhref="/support">support server</Link>.
+			You can change the language of the bot's reponses, command names and descriptions to ensure that your server members can use the bot in their own language. If you're missing a language, you can apply as a translator on our <Link href="/support">support server</Link>.
 		</Card>
 		<Card title="🛠️ Easy Management">
 			You can manage which roles will be given to the booster and which channel will the notifications be sent to with just one command.
