@@ -7,5 +7,5 @@
 </script>
 
 <div class="flex h-screen justify-center items-center text-4xl font-black">
-    <div>Redirecting...</div>
+    Redirecting...
 </div>
