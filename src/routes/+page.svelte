@@ -19,12 +19,12 @@
 
 	<div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3 justify-center">
 		<!-- Invite Btn -->
-		<Button className="bg-primary hover:bg-accent" href="/invite">
+		<Button target="_blank" className="bg-primary hover:bg-accent" href="/invite">
 			<div class="flex h-full justify-center sm:justify-start">Invite<img src={Logo} class="h-[24px] object-contain" alt="Boost Notifications Logo"/>Boost Notifications</div>
 		</Button>
 	
 		<!-- Support Btn -->
-		<Button className="bg-transparent outline outline-1 outline-gray-600 hover:bg-gray-700" href="/support">
+		<Button target="_blank" className="bg-transparent outline outline-1 outline-gray-600 hover:bg-gray-700" href="/support">
 			Join support server
 		</Button>
 	</div>

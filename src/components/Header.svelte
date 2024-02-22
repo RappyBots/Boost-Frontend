@@ -29,7 +29,7 @@
 			</button>
 
 			<!-- Invite Btn -->
-			<Button className="hidden md:flex bg-primary hover:bg-accent" href="/invite">
+			<Button className="hidden md:flex bg-primary hover:bg-accent" target="_blank" href="/invite">
 				<div class="flex h-full">Invite<img src={Logo} class="h-[24px] object-contain" alt="Boost Notifications Logo"/>Boost Notifications</div>
 			</Button>
 		</div>
