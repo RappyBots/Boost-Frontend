@@ -1,3 +1,7 @@
+<script>
+	import Link from "$components/Link.svelte";
+
+</script>
 <div class="p-40 space-y-6">
     <div class="text-center text-4xl font-black">
         Privacy Policy
@@ -68,7 +72,7 @@
         <div class="space-y-2">
             <div class="text-2xl font-bold">6. Contact Information</div>
             <div class="space-y-2">
-                If you have any questions, concerns, or feedback regarding this Privacy Policy or our Discord bot, please contact us at contact@rappytv.com
+                If you have any questions, concerns, or feedback regarding this Privacy Policy or our Discord bot, please contact us at <Link href="mailto:contact@rappytv.com">contact@rappytv.com</Link>
             </div>
         </div>
     </div>
