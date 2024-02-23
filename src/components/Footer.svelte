@@ -11,10 +11,10 @@
     <!-- Links -->
     <div class="flex p-10 text-gray-400 text-right space-x-6">
         <div class="flex flex-col space-y-4">
-            <a href="/doc/privacy">
+            <a href="/docs/privacy">
                 Privacy Policy
             </a>
-            <a href="/doc/terms">
+            <a href="/docs/terms">
                 Terms of Service
             </a>
         </div>
