@@ -16,10 +16,10 @@
             <div class="text-2xl font-bold">1. Information Collection</div>
             <div class="space-y-2">
                 <div>
-                    a. User Data: When you interact with our bot, we may collect certain data to provide the server boost notifications. This data may include your Discord user ID, server ID, and boost timestamp. We do not collect or store any additional personal information.
+                    <strong>a. </strong>User Data: When you interact with our bot, we may collect certain data to provide the server boost notifications. This data may include your Discord user ID, server ID, and boost timestamp. We do not collect or store any additional personal information.
                 </div>
                 <div>
-                    b. Aggregated Data: We may collect aggregated, non-personally identifiable information for statistical purposes, such as the total number of server boosts recorded or the frequency of boosts across servers. This information does not identify individual users.
+                    <strong>b. </strong>Aggregated Data: We may collect aggregated, non-personally identifiable information for statistical purposes, such as the total number of server boosts recorded or the frequency of boosts across servers. This information does not identify individual users.
                 </div>   
             </div>
        </div> 
@@ -28,13 +28,13 @@
             <div class="text-2xl font-bold">2. Use of Information</div>
             <div class="space-y-2">
                 <div>
-                    a. Service Provision: We use the collected data to deliver the server boost notifications to the designated Discord channel. The data is solely used for this purpose and is not shared with any third parties, except as described in this Policy.
+                    <strong>a. </strong>Service Provision: We use the collected data to deliver the server boost notifications to the designated Discord channel. The data is solely used for this purpose and is not shared with any third parties, except as described in this Policy.
                 </div>
                 <div>
-                    b. Communication: We may occasionally send you administrative messages, updates, or important notifications related to the bot service.
+                    <strong>b. </strong>Communication: We may occasionally send you administrative messages, updates, or important notifications related to the bot service.
                 </div>   
                 <div>
-                    c. Improvements and Analytics: We may analyze the aggregated data to improve the functionality and performance of the bot. This may include identifying usage patterns, detecting and fixing technical issues, and enhancing user experience.
+                    <strong>c. </strong>Improvements and Analytics: We may analyze the aggregated data to improve the functionality and performance of the bot. This may include identifying usage patterns, detecting and fixing technical issues, and enhancing user experience.
                 </div>   
             </div>
        </div> 
@@ -43,13 +43,13 @@
             <div class="text-2xl font-bold">3. Data Storage and Security</div>
             <div class="space-y-2">
                 <div>
-                    a. Data Retention: We retain the collected data for the duration necessary to provide the bot service. Once the data is no longer required, we will securely delete or anonymize it.
+                    <strong>a. </strong>Data Retention: We retain the collected data for the duration necessary to provide the bot service. Once the data is no longer required, we will securely delete or anonymize it.
                 </div>
                 <div>
-                    b. Data Security: We implement industry-standard security measures to protect your information from unauthorized access, disclosure, or alteration. However, please note that no method of transmission over the internet or electronic storage is completely secure.
+                    <strong>b. </strong>Data Security: We implement industry-standard security measures to protect your information from unauthorized access, disclosure, or alteration. However, please note that no method of transmission over the internet or electronic storage is completely secure.
                 </div>   
                 <div>
-                    c. Data Sharing: We will not share or sell any user data collected by the bot with third parties unless required by law or with your explicit consent.
+                    <strong>c. </strong>Data Sharing: We will not share or sell any user data collected by the bot with third parties unless required by law or with your explicit consent.
                 </div>   
             </div>
        </div> 
