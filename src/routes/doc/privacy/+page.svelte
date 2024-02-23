@@ -2,7 +2,7 @@
 	import Link from "$components/Link.svelte";
 
 </script>
-<div class="p-40 space-y-6">
+<div class="pt-40 px-10 md:px-40 space-y-6">
     <div class="text-center text-4xl font-black">
         Privacy Policy
     </div>
