@@ -9,7 +9,7 @@
         </div>
         
        <div class="space-y-2">
-            <div class="text-3xl font-bold">1. Information Collection</div>
+            <div class="text-2xl font-bold">1. Information Collection</div>
             <div class="space-y-2">
                 <div>
                     a. User Data: When you interact with our bot, we may collect certain data to provide the server boost notifications. This data may include your Discord user ID, server ID, and boost timestamp. We do not collect or store any additional personal information.
@@ -21,7 +21,7 @@
        </div> 
 
        <div class="space-y-2">
-            <div class="text-3xl font-bold">2. Use of Information</div>
+            <div class="text-2xl font-bold">2. Use of Information</div>
             <div class="space-y-2">
                 <div>
                     a. Service Provision: We use the collected data to deliver the server boost notifications to the designated Discord channel. The data is solely used for this purpose and is not shared with any third parties, except as described in this Policy.
@@ -36,7 +36,7 @@
        </div> 
 
        <div class="space-y-2">
-            <div class="text-3xl font-bold">3. Data Storage and Security</div>
+            <div class="text-2xl font-bold">3. Data Storage and Security</div>
             <div class="space-y-2">
                 <div>
                     a. Data Retention: We retain the collected data for the duration necessary to provide the bot service. Once the data is no longer required, we will securely delete or anonymize it.
@@ -52,21 +52,21 @@
 
         
         <div class="space-y-2">
-            <div class="text-3xl font-bold">4. Children's Privacy</div>
+            <div class="text-2xl font-bold">4. Children's Privacy</div>
             <div class="space-y-2">
                 Our bot is intended for use by individuals who are at least 13 years old. We do not knowingly collect personal information from children under the age of 13. If we become aware that we have inadvertently collected personal data from a child under 13, we will promptly delete it from our records.
             </div>
         </div>
 
         <div class="space-y-2">
-            <div class="text-3xl font-bold">5. Changes to the Privacy Policy</div>
+            <div class="text-2xl font-bold">5. Changes to the Privacy Policy</div>
             <div class="space-y-2">
                 We reserve the right to modify or update this Privacy Policy at any time. Any changes will be effective upon posting the revised Policy on our website. We encourage you to review this Policy periodically for any updates.
             </div>
         </div>
 
         <div class="space-y-2">
-            <div class="text-3xl font-bold">6. Contact Information</div>
+            <div class="text-2xl font-bold">6. Contact Information</div>
             <div class="space-y-2">
                 If you have any questions, concerns, or feedback regarding this Privacy Policy or our Discord bot, please contact us at contact@rappytv.com
             </div>
