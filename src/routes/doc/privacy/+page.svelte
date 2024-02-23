@@ -1,7 +1,12 @@
 <script>
 	import Link from "$components/Link.svelte";
-
 </script>
+
+<head>
+	<meta property="og:title" content="Privacy Policy" />
+	<title>Boost Notifications - Privacy Policy</title>
+</head>
+
 <div class="py-40 px-10 md:px-40 space-y-6">
     <div class="text-center text-4xl font-black">
         Privacy Policy

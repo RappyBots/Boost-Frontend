@@ -1,7 +1,4 @@
 <script>
-	import { slide } from 'svelte/transition';
-  	import { cubicOut } from 'svelte/easing';
-	
     import Logo from "$lib/images/logo.webp"
 	import Button from "./Button.svelte";
 
@@ -36,7 +33,9 @@
     </div>
 	
 	{#if hamburgerMenuOpen}
-		<div class="font-semibold space-y-5 w-full hover:*:text-secondary *:block backdrop-blur-md p-5">
+		<div
+			class="font-semibold space-y-5 w-full hover:*:text-secondary *:block backdrop-blur-md p-5"
+		>
 			{@html
 				document.getElementById("nav-links")?.innerHTML
 			}

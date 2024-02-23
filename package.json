@@ -41,7 +41,9 @@
   },
   "type": "module",
   "dependencies": {
+    "@sveltejs/amp": "^1.1.0",
     "@types/node": "^20.11.19",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "dropcss": "^1.0.16"
   }
 }

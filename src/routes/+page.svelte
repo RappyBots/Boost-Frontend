@@ -1,4 +1,5 @@
 <svelte:head>
+	<meta property="og:title" content="✨ Boost Notifications" />
 	<title>Boost Notifications - Home</title>
 </svelte:head>
 
