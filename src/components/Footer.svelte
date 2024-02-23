@@ -1,11 +1,11 @@
 <div class="flex h-56 bg-[#00000025] justify-between">
     <div class="flex flex-col p-10 h-full space-y-16 text-gray-400">
-        <a href="/contact">
+        <a target="_blank" href="/contact">
             <div class="text-2xl font-semibold">RappyTV</div>
-            <div class="text-md">© 2024 RappyTV</div>
+            <div class="text-md">© {new Date().getFullYear()} RappyTV</div>
         </a>
 
-        <a href="https://holyb.xyz/">Frontend by holybaechu.</a>
+        <a target="_blank" href="https://holyb.xyz/">Frontend by holybaechu.</a>
     </div>
 
     <!-- Links -->

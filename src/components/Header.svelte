@@ -18,9 +18,9 @@
         <div class="h-full flex items-center">
 			<!-- Links -->
 			<div id="nav-links" class="hidden lg:flex space-x-5 mr-4 font-semibold hover:*:text-secondary select-none">
-				<a href="/">Home</a>
-				<a href="/support">Support</a>
-				<a href="/contact">Contact</a>
+				<a target="_blank" href="/">Home</a>
+				<a target="_blank" href="/support">Support</a>
+				<a target="_blank" href="/contact">Contact</a>
 			</div>
 
 			<!-- Hamburger Menu -->
@@ -29,7 +29,7 @@
 			</button>
 
 			<!-- Invite Btn -->
-			<Button className="hidden md:flex bg-primary hover:bg-accent" href="/invite">
+			<Button className="hidden md:flex bg-primary hover:bg-accent mr-5" target="_blank" href="/invite">
 				<div class="flex h-full">Invite<img src={Logo} class="h-[24px] object-contain" alt="Boost Notifications Logo"/>Boost Notifications</div>
 			</Button>
 		</div>
