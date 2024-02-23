@@ -8,7 +8,7 @@
 	let hamburgerMenuOpen = false;
 </script>
 
-<header class="fixed w-screen top-0 h-20 backdrop-blur-md-w-webkit outline outline-[#cbd5e11a] outline-1 drop-shadow-lg">
+<header class="fixed w-screen top-0 h-20 backdrop-blur-md outline outline-[#cbd5e11a] outline-1 drop-shadow-lg">
     <div class="flex h-full items-center px-5 justify-between">
 		<!-- Logo -->
         <a href="/" class="flex items-center h-4/6">
@@ -36,15 +36,10 @@
     </div>
 	
 	{#if hamburgerMenuOpen}
-		<div 
-			class="flex backdrop-blur-md-w-webkit mt-[1px] outline-[#cbd5e11a] outline-1 drop-shadow-lg" 
-			transition:slide="{{ duration: 1000, easing: cubicOut }}"
-		>
-			<div class="font-semibold m-5 space-y-5 w-full hover:*:text-secondary *:block">
-				{@html
-					document.getElementById("nav-links")?.innerHTML
-				}
-			</div>
+		<div class="font-semibold space-y-5 w-full hover:*:text-secondary *:block backdrop-blur-md p-5">
+			{@html
+				document.getElementById("nav-links")?.innerHTML
+			}
 		</div>
 	{/if}
 </header>
