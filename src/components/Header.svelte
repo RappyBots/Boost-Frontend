@@ -15,7 +15,7 @@
         <div class="h-full flex items-center">
 			<!-- Links -->
 			<div id="nav-links" class="hidden lg:flex space-x-5 mr-4 font-semibold hover:*:text-secondary select-none">
-				<a target="_blank" href="/">Home</a>
+				<a href="/">Home</a>
 				<a target="_blank" href="/support">Support</a>
 				<a target="_blank" href="/contact">Contact</a>
 			</div>
