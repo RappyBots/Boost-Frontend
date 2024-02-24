@@ -7,7 +7,7 @@
 <div class="bg-bg-dark text-white">
 	<Header />
 
-	<main>
+	<main class="min-h-screen">
 		<slot />
 	</main>
 

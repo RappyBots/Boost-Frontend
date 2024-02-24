@@ -15,7 +15,9 @@ const config = {
 		
 		alias: {
 			$components: './src/components',
-		}
+		},
+
+		inlineStyleThreshold: Infinity,
 	}
 };
 
