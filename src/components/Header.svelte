@@ -27,14 +27,14 @@
 
 			<!-- Invite Btn -->
 			<Button className="hidden md:flex bg-primary hover:bg-accent mr-5" target="_blank" href="/invite">
-				<div class="flex h-full">Invite<img src={Logo} class="h-[24px] object-contain" alt="Boost Notifications Logo"/>Boost Notifications</div>
+				<img src={Logo} class="h-[24px] object-contain" alt="Boost Notifications Logo"/> <div class="flex h-full items-center">Invite Boost Notifications</div>
 			</Button>
 		</div>
     </div>
 	
 	{#if hamburgerMenuOpen}
 		<div
-			class="font-semibold space-y-5 w-full hover:*:text-secondary *:block backdrop-blur-md p-5"
+			class="font-semibold space-y-5 w-full hover:*:text-secondary *:block backdrop-blur-md p-5 text-center"
 		>
 			{@html
 				document.getElementById("nav-links")?.innerHTML

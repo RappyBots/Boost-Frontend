@@ -19,10 +19,10 @@
 		Get notified when someone boosts your server with <strong class="text-white">flawless customization powered by Discord embeds</strong>, and reward them with custom roles
 	</div>
 
-	<div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3 justify-center">
+	<div class="flex space-y-0 space-x-3 justify-center">
 		<!-- Invite Btn -->
-		<Button target="_blank" className="bg-primary hover:bg-accent" href="/invite">
-			<div class="flex h-full justify-center sm:justify-start">Invite<img src={Logo} class="h-[24px] object-contain" alt="Boost Notifications Logo"/>Boost Notifications</div>
+		<Button target="_blank" className="bg-primary hover:bg-accent sm:flex-row" href="/invite">
+			<img src={Logo} class="h-[24px] object-contain" alt="Boost Notifications Logo"/> <div class="flex h-full items-center">Invite Boost Notifications</div>
 		</Button>
 	
 		<!-- Support Btn -->
