@@ -7,7 +7,7 @@
 <div>
 	<Header />
 
-	<main class="min-h-screen overflow-scroll scrollbar">
+	<main class="min-h-screen">
 		<slot />
 	</main>
 
