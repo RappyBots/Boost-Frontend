@@ -2,9 +2,9 @@
 	import RedirectPage from "$components/RedirectPage.svelte";
 </script>
 
-<head>
+<svelte:head>
 	<meta property="og:title" content="Feedback" />
 	<title>Boost Notifications - Feedback</title>
-</head>
+</svelte:head>
 
 <RedirectPage url="https://boost-feedback.rappytv.com/" />
