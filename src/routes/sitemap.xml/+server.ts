@@ -1,4 +1,4 @@
-const selfURL = "https://boost.rappytv.com";
+const selfURL = "https://boostbot.eu";
 
 const pages = [
     {
