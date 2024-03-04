@@ -4,7 +4,7 @@
 	import "../app.css";
 </script>
 
-<div class="bg-bg-dark text-white">
+<div>
 	<Header />
 
 	<main class="min-h-screen">
@@ -13,3 +13,4 @@
 
 	<Footer />
 </div>
+
