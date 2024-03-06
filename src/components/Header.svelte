@@ -5,7 +5,7 @@
 	let hamburgerMenuOpen = false;
 </script>
 
-<header class="fixed w-screen top-0 h-20 backdrop-blur-md outline outline-[#cbd5e11a] outline-1 drop-shadow-lg">
+<header class="sticky w-screen top-0 h-20 backdrop-blur-md outline outline-[#cbd5e11a] outline-1 drop-shadow-lg">
     <div class="flex h-full items-center px-5 justify-between">
 		<!-- Logo -->
         <a href="/" class="flex items-center h-4/6">
