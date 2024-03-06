@@ -1,7 +1,5 @@
 <script>
 	import Button from "./Button.svelte";
-
-    export let title = "";
 </script>
 
 <div class="flex flex-col h-80 w-full rounded-lg outline outline-1 outline-[#cbd5e11a] bg-contain overflow-hidden" id="card">
