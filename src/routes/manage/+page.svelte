@@ -1,6 +1,15 @@
-<script>
+<script lang="ts">
 	import ServerCard from "$components/ServerCard.svelte";
+	import { onMount } from "svelte";
+	import type Guild from "../../types/Guild";
+
+	let servers: Guild[] = []
+
+	onMount(async () => {
+		servers = await (await fetch("/api/discord/manageableGuilds")).json()
+	})
 </script>
+
 <svelte:head>
 	<meta property="og:title" content="Manage Servers" />
 	<title>Boost Notifications - Manage Servers</title>
@@ -12,16 +21,9 @@
 		<h1 class="text-2xl">Select your server</h1>
 	</div>
 
-	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-5xl w-full justify-center gap-4">
-		<ServerCard/>
-		<ServerCard/>
-		<ServerCard/>
-		<ServerCard/>
-		<ServerCard/>
-		<ServerCard/>
-		<ServerCard/>
-		<ServerCard/>
-		<ServerCard/>
-		<ServerCard/>
+	<div id="servers-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-5xl w-full justify-center gap-4">
+		{#each servers as server}
+			<ServerCard server={server} />
+		{/each}
 	</div>
 </div>

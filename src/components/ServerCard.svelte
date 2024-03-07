@@ -1,28 +1,31 @@
-<script>
+<script lang="ts">
+	import type Guild from "../types/Guild";
 	import Button from "./Button.svelte";
+    import DiscordLogo from "$lib/images/discord-mark-white.png"
+
+    export let server: Guild;
 </script>
 
-<div class="flex flex-col h-80 w-full rounded-lg outline outline-1 outline-[#cbd5e11a] bg-contain overflow-hidden" id="card">
-    <div class="h-[125px] w-full bg-[#161c29] mt-auto">
+<div class="flex flex-col rounded-lg outline outline-1 outline-[#cbd5e11a] bg-contain" id="card">
+    <img
+        class="flex flex-col justify-center min-h-[186px] bg-[#212329] p-5 text-center text-2xl font-bold overflow-clip"
+        src={server.banner ? `https://cdn.discordapp.com/banners/${server.id}/${server.banner}.webp?size=480` : ""}
+        alt={server.banner ? `Banner of ${server.name}` : server.name}
+    />
+    <div class="flex flex-col justify-between flex-1 bg-[#161c29]">
         <div class="flex mx-4 space-x-3">
             <img
-                class="-my-8 max-w-[80px] max-h-[80px] rounded-full"
-                src="https://cdn.discordapp.com/icons/260471731809026048/a_25d613b5a716ab94516c6217e7d3248a.webp?size=96" alt="Icon of LabyMod"
+                class="-my-8 w-[80px] h-[80px] object-contain rounded-full bg-primary"
+                src={server.icon ? `https://cdn.discordapp.com/icons/${server.id}/${server.icon}.webp?size=96` : DiscordLogo} alt={`Icon of ${server.name}`}
             />
 
-            <div class="my-1 text-[28px] font-bold">
-                LabyMod
+            <div class="my-1 text-[26px] font-bold">
+                {server.name}
             </div>
         </div>
 
-        <Button className="m-5 bg-primary hover:bg-accent sm:flex-row text-center" href="/manage/260471731809026048">
+        <Button className="m-5 mt-5 bg-primary hover:bg-accent sm:flex-row text-center" href={`/manage/${server.id}`}>
 			Manage
 		</Button>
     </div>
 </div>
-
-<style>
-    #card {
-        background-image: url("https://cdn.discordapp.com/banners/260471731809026048/a2c3b43274724f46d19be1514cb62646.webp?size=480");
-    }
-</style>
