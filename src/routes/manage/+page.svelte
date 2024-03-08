@@ -3,7 +3,7 @@
 	import { onMount } from "svelte";
 	import type Guild from "../../types/Guild";
 	import { getCookie } from "../../utils/cookies";
-	import { discord } from "../../config"
+	import { discord } from "../../config.ts.example"
 
 	let servers: Guild[] = []
 
