@@ -14,7 +14,15 @@
 			return
 		} 
 
-		servers = await (await fetch("/api/discord/manageableGuilds")).json()
+		await fetch("/api/discord/manageableGuilds", {
+			credentials: "same-origin"
+		}).then(async (res) => {
+			if (res.status === 401) {
+				window.location.href = "/manage"
+			}
+
+			servers = await res.json()
+		})
 	})
 </script>
 
