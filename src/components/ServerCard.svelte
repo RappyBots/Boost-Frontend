@@ -15,11 +15,11 @@
     <div class="flex flex-col justify-between flex-1 bg-[#161c29]">
         <div class="flex mx-4 space-x-3">
             <img
-                class="-my-8 w-[80px] h-[80px] object-contain rounded-full bg-primary"
+                class="-my-8 w-[80px] h-[80px] object-contain rounded-full bg-[#35383f]"
                 src={server.icon ? `https://cdn.discordapp.com/icons/${server.id}/${server.icon}.webp?size=96` : DiscordLogo} alt={`Icon of ${server.name}`}
             />
 
-            <div class="my-1 text-[26px] font-bold">
+            <div class="my-1 text-[26px] font-bold overflow-hidden">
                 {server.name}
             </div>
         </div>

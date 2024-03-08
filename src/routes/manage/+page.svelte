@@ -2,10 +2,17 @@
 	import ServerCard from "$components/ServerCard.svelte";
 	import { onMount } from "svelte";
 	import type Guild from "../../types/Guild";
+	import { getCookie } from "../../utils/cookies";
 
 	let servers: Guild[] = []
 
 	onMount(async () => {
+		const token = getCookie("token")
+		if (!token || !token.value) {
+			window.location.href = `https://discord.com/oauth2/authorize?client_id=${process.env.DISCORD_CLIENT_ID || "1067880912538304583"}&response_type=code&redirect_uri=${encodeURIComponent(`${window.location.origin}/api/discord/callback`)}&scope=identify+guilds`
+			return
+		} 
+
 		servers = await (await fetch("/api/discord/manageableGuilds")).json()
 	})
 </script>
