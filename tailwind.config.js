@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         "bg-dark": "#121826",
+        "bg-dark-lighter": "#1b202c",
         primary: "#bb38b4",
         secondary: "#ff73d3",
         accent: "#fd3df3"

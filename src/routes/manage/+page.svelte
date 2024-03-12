@@ -14,7 +14,7 @@
 			return
 		} 
 
-		await fetch("/api/discord/manageableGuilds", {
+		await fetch("/api/discord/guilds", {
 			credentials: "same-origin"
 		}).then(async (res) => {
 			if (res.status === 401) {
