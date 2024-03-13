@@ -113,7 +113,7 @@
         </Setting>
     </SettingsSection>
 
-    <SettingsSection title="Role Settings">
+    <SettingsSection title="Roles">
         <div class="space-y-2">
             <div class="flex justify-between">
                 <div>Lorem Ipsum</div>
