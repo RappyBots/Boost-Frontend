@@ -8,33 +8,13 @@
 	import { getCookie } from "../../../utils/cookies";
 	import { onMount } from "svelte";
 	import { discord } from "../../../config";
+	import type Guild from "../../../types/Guild";
 
     export let data: {
         id: string
     };
 
-    let server: {
-        id: string,
-        name: string,
-        icon?: string,
-        banner?: string,
-        messages?: {
-            add?: {
-                title?: string,
-                description?: string,
-            },
-            loss?: {
-                title?: string,
-                description?: string,
-            },
-            dm?: string
-        },
-        image?: {
-            boost?: string,
-            loss?: string,
-            dm?: string
-        }
-    };
+    let server: Guild
 
 	onMount(async () => {
         const token = getCookie("token")
@@ -69,88 +49,102 @@
     alt={server?.name || "Loading..."}
 />
 
-<!-- TODO: Fetch channels and roles from Discord -->
-<div class="p-4 space-y-3 lg:px-32 pb-8">
-    <SettingsSection title="Boost Settings">
-        <div class="grid md:grid-cols-2 gap-5">
-            <Setting name="Notification Title">
-                <TextInput placeholder="https://example.com/image.png" value={server?.messages?.add?.title || ""}/>
-            </Setting>
-    
-            <Setting name="Notification Description">
-                <TextInput value={server?.messages?.add?.title || ""}/>
-            </Setting>
-        </div>
-
-        <Setting name="Notification Image">
-            <TextInput value={server?.image?.boost || ""}/>
-        </Setting>
-
-        <Setting name="Notification Channel">
-            <Dropdown options={
-                [
-                    { label: "General", value: "general" },
-                    { label: "Boost", value: "boost" },
-                    { label: "Boosters", value: "boosters" }
-                ]
-            }/>
-        </Setting>
-    </SettingsSection>
-
-    <SettingsSection title="Boost Settings">
-        <div class="grid md:grid-cols-2 gap-5">
-            <Setting name="Notification Title">
-                <TextInput placeholder="https://example.com/image.png" value={server?.messages?.loss?.title || ""}/>
-            </Setting>
-    
-            <Setting name="Notification Description">
-                <TextInput value={server?.messages?.loss?.title || ""}/>
-            </Setting>
-        </div>
-
-        <Setting name="Notification Image">
-            <TextInput value={server?.image?.loss || ""}/>
-        </Setting>
-    </SettingsSection>
-
-    <SettingsSection title="Roles">
-        <div class="space-y-2">
-            <div class="flex justify-between">
-                <div>Lorem Ipsum</div>
-                <button class="font-bold">X</button>
+{#if server}
+    <div class="p-4 space-y-3 lg:px-32 pb-8">
+        <SettingsSection title="Boost Settings">
+            <div class="grid md:grid-cols-2 gap-5">
+                <Setting name="Notification Title">
+                    <TextInput placeholder="https://example.com/image.png" value={server?.messages?.add?.title || ""}/>
+                </Setting>
+        
+                <Setting name="Notification Description">
+                    <TextInput value={server?.messages?.add?.title || ""}/>
+                </Setting>
             </div>
-            <div class="flex justify-between">
-                <div>Lorem Ipsum</div>
-                <button class="font-bold">X</button>
-            </div>
-            <div class="flex justify-between">
-                <div>Lorem Ipsum</div>
-                <button class="font-bold">X</button>
-            </div>
-        </div>
 
-        <Setting name="Add Role">
-            <Dropdown options={[
-                { label: "Role 1", value: "role1" },
-                { label: "Role 2", value: "role2" },
-                { label: "Role 3", value: "role3" }
-            ]}/>
-        </Setting>
-    </SettingsSection>
-    
-    <SettingsSection title="DM Settings">
-        <Setting name="Enable DMs">
-            <Switch/>
-        </Setting>
-
-        <div class="grid md:grid-cols-2 gap-5">
-            <Setting name="DM Image">
-                <TextInput placeholder="https://example.com/image.png" value={server?.image?.dm || ""}/>
+            <Setting name="Notification Image">
+                <TextInput value={server?.image?.boost || ""}/>
             </Setting>
 
-            <Setting name="DM Message">
-                <TextInput value={server?.messages?.dm || ""}/>
+            <Setting name="Notification Channel">
+                <Dropdown options={
+                    server?.channels?.map((channel) => {
+                        return {
+                            label: channel.name,
+                            value: channel,
+                            default: channel.added
+                        }
+                    }) || []
+                }/>
             </Setting>
-        </div>
-    </SettingsSection>
-</div>
+        </SettingsSection>
+
+        <SettingsSection title="Boost Settings">
+            <div class="grid md:grid-cols-2 gap-5">
+                <Setting name="Notification Title">
+                    <TextInput placeholder="https://example.com/image.png" value={server?.messages?.loss?.title || ""}/>
+                </Setting>
+        
+                <Setting name="Notification Description">
+                    <TextInput value={server?.messages?.loss?.title || ""}/>
+                </Setting>
+            </div>
+
+            <Setting name="Notification Image">
+                <TextInput value={server?.image?.loss || ""}/>
+            </Setting>
+        </SettingsSection>
+
+        <SettingsSection title="Roles">
+            <div class="space-y-2">
+                {#each (server?.roles || []).filter((role) => { return role.added }) as role}
+                    <div class="flex justify-between">
+                        <div style={`color: ${role.color}`}>{role.name}</div>
+                        <button class="font-bold" on:click={() => {
+                            server.roles = (server?.roles || []).map((r) => {
+                                if (r.id === role.id) r.added = false
+                                return r
+                            })
+                        }}>X</button>
+                    </div>
+                {/each}
+            </div>
+
+            <Setting name="Add Role">
+                <Dropdown
+                    options={
+                        (server?.roles || []).map((role) => {
+                            return {
+                                label: role.name,
+                                value: role
+                            }
+                        })
+                    }
+
+                    onChange={(role) => {
+                        server.roles = (server?.roles || []).map((r) => {
+                            if (r.id === role.value.id) r.added = true
+                            return r
+                        })
+                    }}
+                />
+            </Setting>
+        </SettingsSection>
+        
+        <SettingsSection title="DM Settings">
+            <Setting name="Enable DMs">
+                <Switch/>
+            </Setting>
+
+            <div class="grid md:grid-cols-2 gap-5">
+                <Setting name="DM Image">
+                    <TextInput placeholder="https://example.com/image.png" value={server?.image?.dm || ""}/>
+                </Setting>
+
+                <Setting name="DM Message">
+                    <TextInput value={server?.messages?.dm || ""}/>
+                </Setting>
+            </div>
+        </SettingsSection>
+    </div>
+{/if}

@@ -2,19 +2,23 @@
     import ExpandMore from "$lib/images/expand-more.svg";
     import { slide } from "svelte/transition";
 
-    export let options: {
+    type Option = {
         label: String,
-        value: String,
+        value: any,
         default?: Boolean
-    }[] = []
+    }
 
-    let selected = options.find(option => option.default)?.label || options[0].label;
+    export let options: Option[] = []
+
+    export let onChange: (option: Option) => void = () => {};
+
+    let selected = options.find(option => option.default) || { label: "Select...", value: "" };
     let isOpen = false;
 </script>
 
 <div class="z-10">
     <button class="flex h-full p-2 bg-[#4949491a] cursor-pointer select-none rounded-lg " on:click={() => isOpen = !isOpen}>
-        {selected}
+        {selected.label}
         <img src={ExpandMore} alt="Expand More" draggable="false" class="transition-all {isOpen ? 'rotate-180' : ''}"/>
     </button>
     
@@ -23,7 +27,7 @@
             duration: 200,
         }}>
             {#each options as option}
-                <button class="w-full cursor-pointer hover:bg-[#75757575] rounded-lg mx-4" on:click={() => {selected = option.label; isOpen = false}}>
+                <button class="w-full cursor-pointer hover:bg-[#75757575] rounded-lg mx-4" on:click={() => {selected = option; isOpen = false; onChange(option)}}>
                     {option.label}
                 </button>
             {/each}

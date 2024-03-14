@@ -24,8 +24,17 @@
             </div>
         </div>
 
-        <Button className="m-5 mt-5 bg-primary hover:bg-accent sm:flex-row text-center" href={`/manage/${server.id}`}>
-			Manage
+        <Button className="m-5 mt-5 bg-primary hover:bg-accent sm:flex-row text-center" href={server.invited ? `/manage/${server.id}` : undefined} on:click={server.invited ? undefined : () => {
+            
+            const win = window.open(`/invite`, "Invite", "width=500,height=800");
+
+            if (win) {
+                setInterval(() => {
+                    if (win.closed) window.location.href = `/manage/${server.id}`
+                }, 1000)
+            }
+        }}>
+			{server.invited ? "Manage" : "Invite"}
 		</Button>
     </div>
 </div>

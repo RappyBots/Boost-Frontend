@@ -38,7 +38,9 @@
 	</div>
 
 	<div id="servers-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-5xl w-full justify-center gap-4">
-		{#each servers as server}
+		{#each servers.sort((a, b) => {
+			return a.invited ? -1 : 1
+		}) as server}
 			<ServerCard server={server} />
 		{/each}
 	</div>
