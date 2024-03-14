@@ -43,7 +43,7 @@
 		{#if servers.length == 0}
 			<div class="text-center text-2xl font-bold">{isLoaded ? "No guilds found!" : "Loading..."}</div>
 			{#if isLoaded}
-				<div>Tips: Make sure you have joined the server and have the Manage Server.</div>
+				<div>Tip: Make sure you have joined the server and have permissions to manage the server.</div>
 			{/if}
 		{:else}
 			<div id="servers-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-5xl w-full justify-center gap-4">
