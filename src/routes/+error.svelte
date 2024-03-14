@@ -7,7 +7,7 @@
 	<title>{$page.status} {$page.error?.message || "Unknown error"}</title>
 </svelte:head>
 
-<div class="flex flex-col h-screen justify-center items-center space-y-1">
+<div class="flex flex-1 flex-col h-full justify-center items-center space-y-1">
     <div class="text-6xl font-black">
         {$page.status}
     </div>
