@@ -6,6 +6,7 @@
 	import { discord } from "../../config"
 
 	let servers: Guild[] = []
+	let isLoaded = false
 
 	onMount(async () => {
 		const token = getCookie("token")
@@ -22,6 +23,7 @@
 			}
 
 			servers = await res.json()
+			isLoaded = true
 		})
 	})
 </script>
@@ -37,11 +39,20 @@
 		<h1 class="text-2xl">Select your server</h1>
 	</div>
 
-	<div id="servers-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-5xl w-full justify-center gap-4">
-		{#each servers.sort((a, b) => {
-			return a.invited ? -1 : 1
-		}) as server}
-			<ServerCard server={server} />
-		{/each}
+	<div class="{servers.length == 0 ? "space-y-3" : "space-y-20"}">
+		{#if servers.length == 0}
+			<div class="text-center text-2xl font-bold">{isLoaded ? "No guilds found!" : "Loading..."}</div>
+			{#if isLoaded}
+				<div>Tips: Make sure you have joined the server and have the Manage Server.</div>
+			{/if}
+		{:else}
+			<div id="servers-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-5xl w-full justify-center gap-4">
+				{#each servers.sort((a, b) => {
+					return a.invited ? -1 : 1
+				}) as server}
+					<ServerCard server={server} />
+				{/each}
+			</div>
+		{/if}
 	</div>
 </div>
