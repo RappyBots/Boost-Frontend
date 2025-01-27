@@ -1,7 +1,8 @@
 <script>
-    export let url = "";
 
     import { onMount } from 'svelte';
+    /** @type {{url?: string}} */
+    let { url = "" } = $props();
 
     onMount(() => {
         window.location.href = url;
