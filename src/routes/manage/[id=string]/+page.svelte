@@ -10,11 +10,15 @@
 	import { discord } from "../../../config";
 	import type Guild from "../../../types/Guild";
 
-    export let data: {
+    interface Props {
+        data: {
         id: string
     };
+    }
 
-    let server: Guild
+    let { data }: Props = $props();
+
+    let server: Guild = $state()
 
 	onMount(async () => {
         const token = getCookie("token")
@@ -100,7 +104,7 @@
                 {#each (server?.roles || []).filter((role) => { return role.added }) as role}
                     <div class="flex justify-between">
                         <div style={`color: ${role.color}`}>{role.name}</div>
-                        <button class="font-bold" on:click={() => {
+                        <button class="font-bold" onclick={() => {
                             server.roles = (server?.roles || []).map((r) => {
                                 if (r.id === role.id) r.added = false
                                 return r

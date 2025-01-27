@@ -2,7 +2,7 @@
     import Logo from "$lib/images/logo.webp"
 	import Button from "./Button.svelte";
 
-	let hamburgerMenuOpen = false;
+	let hamburgerMenuOpen = $state(false);
 </script>
 
 <header class="sticky top-0 h-20 backdrop-blur-md outline outline-[#cbd5e11a] outline-1 drop-shadow-lg">
@@ -21,7 +21,7 @@
 			</div>
 
 			<!-- Hamburger Menu -->
-			<button on:click={() => (hamburgerMenuOpen = !hamburgerMenuOpen)} class="lg:hidden flex mr-3 text-3xl">
+			<button onclick={() => (hamburgerMenuOpen = !hamburgerMenuOpen)} class="lg:hidden flex mr-3 text-3xl">
 				☰
 			</button>
 

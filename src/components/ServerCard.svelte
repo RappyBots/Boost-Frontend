@@ -3,7 +3,11 @@
 	import Button from "./Button.svelte";
     import DiscordLogo from "$lib/images/discord-mark-white.png"
 
-    export let server: Guild;
+    interface Props {
+        server: Guild;
+    }
+
+    let { server }: Props = $props();
 </script>
 
 <div class="flex flex-col rounded-lg outline outline-1 outline-[#cbd5e11a] bg-contain" id="card">

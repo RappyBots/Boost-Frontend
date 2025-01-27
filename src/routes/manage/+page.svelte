@@ -5,8 +5,8 @@
 	import { getCookie } from "../../utils/cookies";
 	import { discord } from "../../config"
 
-	let servers: Guild[] = []
-	let isLoaded = false
+	let servers: Guild[] = $state([])
+	let isLoaded = $state(false)
 
 	onMount(async () => {
 		const token = getCookie("token")
